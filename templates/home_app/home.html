@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<!-- home section starts  -->
+<section class="home" id="home">
+
+    {% if home %}
+    {% comment %} {% for homes in home %} {% endcomment %}
+    <div class="content">
+        <h3>{{ home.video_title }}</h3>
+        <p>{{ home.video_short_description }}</p>
+        {% comment %} <a href="#" class="btn">discover more</a> {% endcomment %}
+    </div>
+
+    <div class="video-container">
+        <video src="{{ home.video_uplode.url }}" id="video-slider" loop autoplay muted></video>
+    </div>
+    {% comment %} {% endfor %} {% endcomment %}
+
+    {% else %}
+
+    <div class="content">
+        <h3>adventure is worthwhile</h3>
+        <p>dicover new places with us, adventure awaits</p>
+        {% comment %} <a href="#" class="btn">discover more</a> {% endcomment %}
+    </div>
+
+    <div class="video-container">
+        <video src="{% static 'images/vid-1.mp4' %}" id="video-slider" loop autoplay muted></video>
+    </div>
+
+
+    {% endif %}
+
+
+</section>
+<!-- home section ends -->
+
+{% endblock %}

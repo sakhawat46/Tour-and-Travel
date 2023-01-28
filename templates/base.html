@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGD Tour & Travel</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+
+
+</head>
+
+<body>
+
+
+    <!-- header section starts  -->
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <!-- <a href="{% url 'home_app:home' %}" class="logo"><span>BGD</span> Tour</a> -->
+        <a href="{% url 'home_app:home' %}" class="logo"><img src="/static/images/logo1.jpg" alt="" width="50px"></a>
+
+        <nav class="navbar">
+            <a href="{% url 'home_app:home' %}">home</a>
+            <a href="{% url 'book_app:book' %}">book</a>
+            <a href="{% url 'package_app:package' %}">packages</a>
+            <a href="{% url 'services_app:services' %}">services</a>
+            <a href="{% url 'gallery_app:gallery' %}">gallery</a>
+            <a href="{% url 'blog_app:blog' %}">Blog</a>
+            <a href="{% url 'contact_app:contact' %}">contact</a>
+        </nav>
+
+
+
+        <div class="icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+
+
+
+        <nav class="navbar">
+            <a href="#"><i class="fas fa-phone"></i> +88 019-72379494</a>
+        </nav>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+    <!-- header section ends -->
+
+
+    {% block body %}
+
+
+    {% endblock %}
+
+
+
+    <!-- footer section start  -->
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>about us</h3>
+                <p>Phone : +88 019-72379494 <br>
+                    Landline : +88 02-8090528 <br>
+                    Email : info@bgdonline.net <br>
+                    Address : 820, Mamun Tower(8th floor), Shewrapara, Mirpur, Dhaka-1216
+                </p>
+            </div>
+            <div class="box">
+                <h3>branch locations</h3>
+                <a href="#">india</a>
+                <a href="#">USA</a>
+                <a href="#">japan</a>
+                <a href="#">france</a>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="{% url 'home_app:home' %}">home</a>
+                <a href="{% url 'book_app:book' %}">book</a>
+                <a href="{% url 'package_app:package' %}">packages</a>
+                <a href="{% url 'services_app:services' %}">services</a>
+            </div>
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#">facebook</a>
+                <a href="#">instagram</a>
+                <a href="#">twitter</a>
+                <a href="#">linkedin</a>
+            </div>
+
+        </div>
+
+        <h1 class="credit"> created by <span> BGD IT Ltd. </span> | all rights reserved! </h1>
+
+    </section>
+    <!-- footer section ends  -->
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>

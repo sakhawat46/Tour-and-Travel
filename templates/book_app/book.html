@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+{% block body %}
+
+<!-- book section starts  -->
+<section class="book" id="book">
+
+    <h1 class="heading">
+        <span>b</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>n</span>
+        <span>o</span>
+        <span>w</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="{% static 'images/book-img.svg' %}" alt="">
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="inputBox" style="font-size: 2.0rem; font-weight: bold; width: 40%;">
+                <!-- <h3>Tour Place:</h3> -->
+                {% comment %} <input type="text" name="tour_place" placeholder="place name"> {% endcomment %}
+                {{ form.tour_place|as_crispy_field }}
+            </div>
+            <div class="inputBox">
+                <h3>Name:</h3>
+                {% comment %} <input type="text" name="name" placeholder="Enter Your Name"> {% endcomment %}
+                {{ form.name|as_crispy_field }}
+            </div>
+            <div class="inputBox">
+                <h3>Mobile Number:</h3>
+                {% comment %} <input type="text" name="mobile_number" placeholder="Enter Your Phone Number"> {% endcomment %}
+                {{ form.mobile_number|as_crispy_field }}
+            </div>
+            <div class="inputBox">
+                <h3>Arrivals:</h3>
+                {% comment %} <input type="date" name="arrivals"> {% endcomment %}
+                {{ form.arrivals|as_crispy_field }}
+            </div>
+            <div class="inputBox">
+                <h3>Leaving:</h3>
+                {% comment %} <input type="date" name="leaving"> {% endcomment %}
+                {{ form.leaving|as_crispy_field }}
+            </div>
+            <input type="submit" class="btn" value="book now">
+        </form>
+
+    </div>
+
+</section>
+<!-- book section ends -->
+
+{% endblock %}
