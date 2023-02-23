@@ -10,17 +10,15 @@ from django.contrib import messages
 
 def book(request):
     form = BookForm()
-    # registered = False
+    registered = False
     if request.method == "POST":
         form = BookForm(data=request.POST)
         if form.is_valid():
             form.save()
-            # registered = True
+            registered = True
 
-            # messages.success(request, "Booking Successfully!")
-
-            return HttpResponseRedirect(reverse('book_app:book'))
-    diction = {'form':form}
+            # return HttpResponseRedirect(reverse('book_app:book'))
+    diction = {'form':form, 'registered':registered}
     return render(request,'book_app/book.html', context = diction)
 
 

@@ -90,6 +90,7 @@ header .navbar a{
   color:#fff;
   font-size: 2rem;
   margin:0 .8rem;
+  text-decoration: none;
 }
 
 header .navbar a:hover{

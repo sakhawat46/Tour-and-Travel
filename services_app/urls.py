@@ -1,4 +1,4 @@
-from django.conf.urls import url
+# from django.conf.urls import url
 from django.urls import path
 from services_app import views
 
