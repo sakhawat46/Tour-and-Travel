@@ -6,5 +6,7 @@ app_name = "services_app"
 
 urlpatterns = [
     path('', views.services, name='services'),
+    path('visa/', views.visa, name='visa'),
+    path('visa_details/', views.visa_details, name='visa_details'),
 
 ]

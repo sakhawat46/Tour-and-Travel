@@ -118,6 +118,18 @@
     <!-- custom js file link  -->
     <script src="{% static 'js/script.js' %}"></script>
 
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myDIV");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
+
+
 </body>
 
 </html>
