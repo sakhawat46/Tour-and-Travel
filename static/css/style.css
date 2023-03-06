@@ -625,6 +625,17 @@ header .search-bar-container label:hover{
 
 
 
+.content{
+  text-align: center;
+  margin-top: 150px;
+}
+
+.content h3{
+  font-size: 3.5rem;
+  text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+}
+
+
 
 
 
