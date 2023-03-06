@@ -8,5 +8,6 @@ urlpatterns = [
     path('', views.services, name='services'),
     path('visa/', views.visa, name='visa'),
     path('visa_details/', views.visa_details, name='visa_details'),
+    path('<str:slug>', views.country_details, name='country_details'),
 
 ]

@@ -170,77 +170,20 @@
           <div id="myDIV" class="row text-center">
 
             <div class="row row-cols-1 row-cols-md-6 g-4">
+
+              {% for country in all_country %}
+
               <div class="col">
                 <div class="card">
-                  <img src="/static/images/country_flag/Flag_of_Bangladesh.svg" class="card-img-top" alt="...">
+                  <a href="{% url 'services_app:country_details' slug=country.slug %}"><img src="{{ country.flag_image.url }}" class="card-img-top" alt="..."></a>
                   <div class="card-body">
-                    <h1 class="card-title">Bangladesh</h1>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col">
-                <div class="card">
-                  <img src="/static/images/country_flag/Flag_of_Bangladesh.svg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h1 class="card-title">India</h1>
+                    <a href="{% url 'services_app:country_details' slug=country.slug %}" style="text-decoration: none;"><h1 class="card-title">{{ country.name }}</h1></a>
                   </div>
                 </div>
               </div>
 
-              <div class="col">
-                <div class="card">
-                  <img src="/static/images/country_flag/Flag_of_Bangladesh.svg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h1 class="card-title">Pakisthan</h1>
-                  </div>
-                </div>
-              </div>
+              {% endfor %}
 
-              <div class="col">
-                <div class="card">
-                  <img src="/static/images/country_flag/Flag_of_Bangladesh.svg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h1 class="card-title">USA</h1>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card">
-                  <img src="/static/images/country_flag/Flag_of_Bangladesh.svg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h1 class="card-title">Pakisthan</h1>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card">
-                  <img src="/static/images/country_flag/Flag_of_Bangladesh.svg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h1 class="card-title">USA</h1>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card">
-                  <img src="/static/images/country_flag/Flag_of_Bangladesh.svg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h1 class="card-title">Pakisthan</h1>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card">
-                  <img src="/static/images/country_flag/Flag_of_Bangladesh.svg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h1 class="card-title">USA</h1>
-                  </div>
-                </div>
-              </div>
             </div>
 
           </div>

@@ -1,9 +1,13 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
 class Country(models.Model):
     name = models.CharField(max_length=50)
+    description = RichTextField(blank=True, null=True)
+    flag_image = models.ImageField(upload_to='flag_images')
+    slug = models.SlugField(max_length=255, unique=True)
 
     class Meta:
         ordering = ['name',]
