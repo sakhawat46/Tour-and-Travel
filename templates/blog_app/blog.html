@@ -22,7 +22,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
                 <img src="{{ row.blog_image.url }}" width="100%">
             </div>
             <div class="col-sm-8">
-                <h3><p class="text-justify">{{ row.short_description | safe }}</p></h3>
+                <h3><p class="text-justify">{{ row.short_description | linebreaks }}</p></h3>
             </div>
         </div>
 

@@ -26,7 +26,6 @@
             {% endif %}
             <div class="content">
                 <a href="{% url 'package_app:package_details' slug=package.slug %}"><h3> <i class="fas fa-map-marker-alt"></i> {{ package.tour_place }} </h3></a>
-                <p>{{ package.tour_place_description|slice:":30" }}</p>
                 <div class="price">
 
                     ৳ {{ package.package_new_price }}

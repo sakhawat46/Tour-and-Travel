@@ -16,6 +16,8 @@ def book(request):
         if form.is_valid():
             form.save()
             registered = True
+            
+            form = BookForm()
 
             # return HttpResponseRedirect(reverse('book_app:book'))
     diction = {'form':form, 'registered':registered}
