@@ -49,7 +49,7 @@ section{
   background:none;
 }
 
-.btn{
+/* .btn{
   display: inline-block;
   margin-top: 1rem;
   background:var(--orange);
@@ -58,12 +58,12 @@ section{
   border:.2rem solid var(--orange);
   cursor: pointer;
   font-size: 1.7rem;
-}
+} */
 
-.btn:hover{
+/* .btn:hover{
   background:rgba(255, 165, 0,.2);
   color:var(--orange);
-}
+} */
 
 header{
   position: fixed;
