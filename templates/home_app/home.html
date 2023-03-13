@@ -41,68 +41,99 @@
     <div class="container rounded shadow-sm" style="margin-top: 200px;">
         <form action="">
             <div class="row">
+
                 <div class="col-md-2 pe-0 col-sm-12">
-                    <div class="btn radio-btn mb-3"> <label class="radio"> <input type="radio" value="a" name="book"
-                                checked> Roundtrip <span></span> </label> </div>
+                    <div class="btn radio-btn mb-3"> <label class="radio"> <input type="radio" value="a" name="book" checked>
+                            <h1 style="font-weight: bold;">One Way</h1> <span></span>
+                        </label> </div>
                 </div>
-                <div class="col-md-2 pe-0 col-sm-12">
-                    <div class="btn radio-btn mb-3"> <label class="radio"> <input type="radio" value="a" name="book"> One
-                            way <span></span> </label> </div>
-                </div>
+
                 <div class="col-md-2 pe-0 col-sm-12">
                     <div class="btn radio-btn mb-3"> <label class="radio"> <input type="radio" value="a" name="book">
-                            Multi-City <span></span> </label> </div>
+                            <h1 style="font-weight: bold;">Round Trip</h1> <span></span>
+                        </label> </div>
+                </div>
+
+                <div class="col-md-2 pe-0 col-sm-12">
+                    <div class="btn radio-btn mb-3"> <label class="radio"> <input type="radio" value="a" name="book">
+                            <h1 style="font-weight: bold;">Multi City</h1> <span></span>
+                        </label> </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12 mb-4">
+                    <div class="form-control d-flex flex-column fs-3">
+                        <p class="h-blue fw-bold">FLYING FROM</p>
+
+                        <select class="border-0 outline-none">
+                            <option value="" hidden selected>City or Airport</option>
+                            <option value="1">Dhaka (Hazrat Shahjalal International Airport)</option>
+                            <option value="2">Kolkata (Netaji Subhash Chandra Bose International Airport)</option>
+                            <option value="3">Chennai (Chennai International Airport)</option>
+                            <option value="4">Delhi (Indira Gandhi International Airport)</option>
+                            <option value="5">Mumbai (Chattrapati Shivaji International Airport)</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 mb-4">
+                    <div class="form-control d-flex flex-column fs-3">
+                        <p class="h-blue fw-bold">FLYING TO</p>
+
+                        <select class="border-0 outline-none">
+                            <option value="" hidden selected>City or Airport</option>
+                            <option value="1">Dhaka (Hazrat Shahjalal International Airport)</option>
+                            <option value="2">Kolkata (Netaji Subhash Chandra Bose International Airport)</option>
+                            <option value="3">Chennai (Chennai International Airport)</option>
+                            <option value="4">Delhi (Indira Gandhi International Airport)</option>
+                            <option value="5">Mumbai (Chattrapati Shivaji International Airport)</option>
+                        </select>
+
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-12 mb-4">
                     <div class="form-control d-flex flex-column">
-                        <p class="h-blue">FLYING FROM</p> <input class="inputbox" placeholder="City or Airport" type="text">
+                        <p class="h-blue fw-bold">DEPARTING</p> <input class="inputbox fs-4" type="date">
                     </div>
                 </div>
                 <div class="col-md-6 col-12 mb-4">
                     <div class="form-control d-flex flex-column">
-                        <p class="h-blue">FLYING TO</p> <input class="inputbox" placeholder="City or Airport" type="text">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-12 mb-4">
-                    <div class="form-control d-flex flex-column">
-                        <p class="h-blue">DEPARTING</p> <input class="inputbox textmuted" type="date">
-                    </div>
-                </div>
-                <div class="col-md-6 col-12 mb-4">
-                    <div class="form-control d-flex flex-column">
-                        <p class="h-blue">RETURNING</p> <input class="inputbox textmuted " type="date">
+                        <p class="h-blue fw-bold">RETURNING</p> <input class="inputbox fs-4" type="date">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="form-control d-flex flex-column">
-                        <p class="h-blue">ADULTS(18+)</p> <select class="border-0 outline-none">
-                            <option value="" hidden selected>0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                    <div class="form-control d-flex flex-column fs-3 fw-bold">
+                        <p class="h-blue fw-bold">ADULTS(18+)</p> <select class="border-0 outline-none">
+                            <option value="" hidden selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            <option value="4">Four</option>
+                            <option value="5">Five</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="form-control d-flex flex-column">
-                        <p class="h-blue">CHILDREN(0-17)</p> <select class="border-0 outline-none">
-                            <option value="" hidden selected>0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                    <div class="form-control d-flex flex-column fs-3 fw-bold">
+                        <p class="h-blue fw-bold">CHILDREN(0-17)</p> <select class="border-0 outline-none">
+                            <option value="" hidden selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            <option value="4">Four</option>
+                            <option value="5">Five</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="form-control d-flex flex-column">
-                        <p class="h-blue">TRAVEL CLASS</p> <select class="border-0 outline-none">
-                            <option value="" hidden selected>Class</option>
+                    <div class="form-control d-flex flex-column fs-3 fw-bold">
+                        <p class="h-blue fw-bold">TRAVEL CLASS</p> <select class="border-0 outline-none">
+                            <option value="" hidden selected>Class Select</option>
                             <option value="1">Economy</option>
                             <option value="2">Premium</option>
                             <option value="3">Business</option>
@@ -110,7 +141,7 @@
                     </div>
                 </div>
             </div>
-            <div class="btn btn-primary form-control text-center">SHOWN FLIGHTS</div>
+            <div class="btn btn-outline-warning form-control text-center"><strong>SHOWN FLIGHTS</strong></div>
         </form>
     </div>
 
