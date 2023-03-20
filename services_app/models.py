@@ -52,3 +52,18 @@ class Visa(models.Model):
 
     def __str__(self):
         return str(self.name)
+    
+
+class Flight(models.Model):
+    flight_type = models.CharField(max_length=250)
+    flying_from = models.CharField(max_length=250)
+    flying_to = models.CharField(max_length=250)
+    departing = models.CharField(max_length=250)
+    returning = models.CharField(max_length=250)
+    adults = models.CharField(max_length=250)
+    children = models.CharField(max_length=250)
+    travel_class =models.CharField(max_length=250)
+
+
+    def __str__(self):
+        return str(self.flight_type)

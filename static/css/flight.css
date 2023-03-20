@@ -96,8 +96,9 @@
     padding: 10px
 }
 
-.btn.btn-outline-warning {
+.btn.btn-warning {
     height: 60px;
+    width: 50px;
     font-size: 20px;
     padding: 10px
 }
