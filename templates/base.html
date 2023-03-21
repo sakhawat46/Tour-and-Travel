@@ -5,7 +5,9 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BGD Tour & Travel</title>
+    <title>{% block title %}BGD Tour & Travel{% endblock %}</title>
+
+    <link rel="icon" type="image/x-icon" href="/static/images/logo2.png">
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
@@ -27,7 +29,7 @@
         <div id="menu-bar" class="fas fa-bars"></div>
 
         <!-- <a href="{% url 'home_app:home' %}" class="logo"><span>BGD</span> Tour</a> -->
-        <a href="{% url 'home_app:home' %}" class="logo"><img src="/static/images/logo1.jpg" alt="" width="50px"></a>
+        <a href="{% url 'home_app:home' %}" class="logo"><img src="/static/images/logo1-modified.png" alt="" width="50px"></a>
 
         <nav class="navbar">
             <a href="{% url 'home_app:home' %}">home</a>
@@ -44,7 +46,7 @@
 
 
         <nav class="navbar">
-            <a href="#"><i class="fas fa-phone"></i> +88 019-72379494</a>
+            <a href="tel:+8801972379494"><i class="fas fa-phone"></i> +88 019-72379494</a>
         </nav>
 
         <form action="" class="search-bar-container">

@@ -7,16 +7,20 @@
 <!-- Message CDN Start -->
 
 <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
 <!-- Message CDN End -->
 
 
 
 {% extends 'base.html' %}
+{% block title %}BGD Tour & Travel | Flight{% endblock %}
 {% load static %}
 {% block body %}
 
@@ -34,36 +38,39 @@
         {% for message in messages %}
 
 
-         <div class="alert alert-warning alert-dismissible fade show" style="margin-left: 25%; margin-right: 25%; margin-bottom: 100px;" role="alert">
+        <div class="alert alert-warning alert-dismissible fade show"
+            style="margin-left: 25%; margin-right: 25%; margin-bottom: 100px;" role="alert">
             <strong>{{ message }}</strong>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
+        </div>
 
 
-         {% endfor %}
-         {% endif %}
+        {% endfor %}
+        {% endif %}
 
 
 
 
-        
+
         <div class="row">
 
             <div class="col-md-2 pe-0 col-sm-12">
-                <div class="btn radio-btn mb-3"> <label class="radio"> <input type="radio" value="One Way" name="flight_type"
-                            checked>
+                <div class="btn radio-btn mb-3"> <label class="radio"> <input type="radio" value="One Way"
+                            name="flight_type" checked>
                         <h1 style="font-weight: bold;">One Way</h1> <span></span>
                     </label> </div>
             </div>
 
             <div class="col-md-2 pe-0 col-sm-12">
-                <div class="btn radio-btn mb-3"> <label class="radio"> <input type="radio" value="Round Trip" name="flight_type">
+                <div class="btn radio-btn mb-3"> <label class="radio"> <input type="radio" value="Round Trip"
+                            name="flight_type">
                         <h1 style="font-weight: bold;">Round Trip</h1> <span></span>
                     </label> </div>
             </div>
 
             <div class="col-md-2 pe-0 col-sm-12">
-                <div class="btn radio-btn mb-3"> <label class="radio"> <input type="radio" value="Multi City" name="flight_type">
+                <div class="btn radio-btn mb-3"> <label class="radio"> <input type="radio" value="Multi City"
+                            name="flight_type">
                         <h1 style="font-weight: bold;">Multi City</h1> <span></span>
                     </label> </div>
             </div>
@@ -77,11 +84,16 @@
 
                     <select class="border-0 outline-none" name="flying_from" required>
                         <option value="" hidden selected>City or Airport</option>
-                        <option value="Dhaka (Hazrat Shahjalal International Airport)">Dhaka (Hazrat Shahjalal International Airport)</option>
-                        <option value="Kolkata (Netaji Subhash Chandra Bose International Airport)">Kolkata (Netaji Subhash Chandra Bose International Airport)</option>
-                        <option value="Chennai (Chennai International Airport)">Chennai (Chennai International Airport)</option>
-                        <option value="Delhi (Indira Gandhi International Airport)">Delhi (Indira Gandhi International Airport)</option>
-                        <option value="Mumbai (Chattrapati Shivaji International Airport)">Mumbai (Chattrapati Shivaji International Airport)</option>
+                        <option value="Dhaka (Hazrat Shahjalal International Airport)">Dhaka (Hazrat Shahjalal
+                            International Airport)</option>
+                        <option value="Kolkata (Netaji Subhash Chandra Bose International Airport)">Kolkata (Netaji
+                            Subhash Chandra Bose International Airport)</option>
+                        <option value="Chennai (Chennai International Airport)">Chennai (Chennai International Airport)
+                        </option>
+                        <option value="Delhi (Indira Gandhi International Airport)">Delhi (Indira Gandhi International
+                            Airport)</option>
+                        <option value="Mumbai (Chattrapati Shivaji International Airport)">Mumbai (Chattrapati Shivaji
+                            International Airport)</option>
                     </select>
 
                 </div>
@@ -92,11 +104,16 @@
 
                     <select class="border-0 outline-none" name="flying_to" required>
                         <option value="" hidden selected>City or Airport</option>
-                        <option value="Dhaka (Hazrat Shahjalal International Airport)">Dhaka (Hazrat Shahjalal International Airport)</option>
-                        <option value="Kolkata (Netaji Subhash Chandra Bose International Airport)">Kolkata (Netaji Subhash Chandra Bose International Airport)</option>
-                        <option value="Chennai (Chennai International Airport)">Chennai (Chennai International Airport)</option>
-                        <option value="Delhi (Indira Gandhi International Airport)">Delhi (Indira Gandhi International Airport)</option>
-                        <option value="Mumbai (Chattrapati Shivaji International Airport)">Mumbai (Chattrapati Shivaji International Airport)</option>
+                        <option value="Dhaka (Hazrat Shahjalal International Airport)">Dhaka (Hazrat Shahjalal
+                            International Airport)</option>
+                        <option value="Kolkata (Netaji Subhash Chandra Bose International Airport)">Kolkata (Netaji
+                            Subhash Chandra Bose International Airport)</option>
+                        <option value="Chennai (Chennai International Airport)">Chennai (Chennai International Airport)
+                        </option>
+                        <option value="Delhi (Indira Gandhi International Airport)">Delhi (Indira Gandhi International
+                            Airport)</option>
+                        <option value="Mumbai (Chattrapati Shivaji International Airport)">Mumbai (Chattrapati Shivaji
+                            International Airport)</option>
                     </select>
 
                 </div>
@@ -106,7 +123,8 @@
         <div class="row">
             <div class="col-md-6 col-12 mb-4">
                 <div class="form-control d-flex flex-column">
-                    <p class="h-blue fw-bold">DEPARTING</p> <input class="inputbox fs-4" type="date" name="departing" required>
+                    <p class="h-blue fw-bold">DEPARTING</p> <input class="inputbox fs-4" type="date" name="departing"
+                        required>
                 </div>
             </div>
             <div class="col-md-6 col-12 mb-4">
@@ -120,7 +138,8 @@
 
             <div class="col-md-4 mb-4">
                 <div class="form-control d-flex flex-column fs-3 fw-bold">
-                    <p class="h-blue fw-bold">ADULTS(18+)</p> <select class="border-0 outline-none" name="adults" required>
+                    <p class="h-blue fw-bold">ADULTS(18+)</p> <select class="border-0 outline-none" name="adults"
+                        required>
                         <option value="" hidden selected>Open this select menu</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -133,7 +152,8 @@
 
             <div class="col-md-4 mb-4">
                 <div class="form-control d-flex flex-column fs-3 fw-bold">
-                    <p class="h-blue fw-bold">CHILDREN(0-17)</p> <select class="border-0 outline-none" name="children" required>
+                    <p class="h-blue fw-bold">CHILDREN(0-17)</p> <select class="border-0 outline-none" name="children"
+                        required>
                         <option value="" hidden selected>Open this select menu</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -146,7 +166,8 @@
 
             <div class="col-md-4 mb-4">
                 <div class="form-control d-flex flex-column fs-3 fw-bold">
-                    <p class="h-blue fw-bold">TRAVEL CLASS</p> <select class="border-0 outline-none" name="travel_class" required>
+                    <p class="h-blue fw-bold">TRAVEL CLASS</p> <select class="border-0 outline-none" name="travel_class"
+                        required>
                         <option value="" hidden selected>Class Select</option>
                         <option value="Economy">Economy</option>
                         <option value="Premium">Premium</option>
@@ -157,9 +178,12 @@
 
         </div>
 
-        <div>
-            <button type="submit" class="btn btn-warning form-control text-center"><strong>FLIGHTS BOOKING</strong></button>
+
+        <div class="d-grid gap-2 col-6 mx-auto mt-5">
+            <button class="btn btn-warning" type="submit" style="height: 50px;"><strong>FLIGHTS BOOKING</strong></button>
         </div>
+
+
     </form>
 </div>
 
