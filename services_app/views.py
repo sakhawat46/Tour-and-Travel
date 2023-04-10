@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect, redirect
 
 from django.urls import reverse, reverse_lazy
-from services_app.forms import VisaForm
+from services_app.forms import VisaForm, PassportForm
 from services_app.models import Country, Flight
 
 from django.contrib import messages
@@ -65,3 +65,13 @@ def flight(request):
 
     return render(request,'services_app/flight.html')
 
+
+def passport(request):
+    form = PassportForm()
+    if request.method == "POST":
+        form = PassportForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('services_app:passport'))
+    diction = {'form':form}
+    return render(request,'services_app/passport.html', context = diction)

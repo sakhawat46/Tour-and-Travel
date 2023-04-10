@@ -67,3 +67,37 @@ class Flight(models.Model):
 
     def __str__(self):
         return str(self.flight_type)
+    
+
+
+class Passport(models.Model):
+    full_name = models.CharField(max_length=50)
+    gender_name = (
+        (1, "Male"),
+        (2, "Female"),
+    )
+    gender = models.IntegerField(choices=gender_name)
+    date_of_birth = models.DateField()
+    birth_certificate = models.CharField(max_length=50)
+    nid_number = models.CharField(max_length=100, blank=True, null=True, verbose_name="NID Number")
+    occupation_name = (
+        (1, "Student"),
+        (2, "Government Job"),
+        (3, "Private Job"),
+        (4, "Business"),
+        (5, "Teacher"),
+        (6, "Doctor"),
+        (7, "Other"),
+    )
+    occupation = models.IntegerField(choices=occupation_name)
+    father_name = models.CharField(max_length=50)
+    father_nid = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    mother_nid = models.CharField(max_length=50)
+    present_address = models.TextField()
+    permanent_address = models.TextField()
+    email = models.EmailField()
+    mobile = models.CharField(max_length=15)
+
+    def __str__(self):
+        return str(self.full_name)

@@ -9,4 +9,5 @@ urlpatterns = [
     path('visa/', views.visa, name='visa'),
     path('<str:slug>', views.country_details, name='country_details'),
     path('flight/', views.flight, name='flight'),
+    path('passport/', views.passport, name='passport'),
 ]

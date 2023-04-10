@@ -21,15 +21,18 @@
 }
 
 html{
-  font-size: 62.5%;
+  font-size: 75%;
   overflow-x: hidden;
   scroll-padding-top: 6rem;
   scroll-behavior: smooth;
 }
 
+
+
 section{
   padding:2rem 9%;
 }
+
 
 .heading{
   text-align: center;
@@ -146,6 +149,10 @@ header .search-bar-container label:hover{
   color:var(--orange);
 }
 
+
+
+
+
 .login-form-container{
   position: fixed;
   top:-120%; left: 0;
@@ -228,6 +235,10 @@ header .search-bar-container label:hover{
   cursor: pointer;
 }
 
+
+
+
+
 #menu-bar{
   color:#fff;
   border:.1rem solid #fff;
@@ -296,6 +307,10 @@ header .search-bar-container label:hover{
   background:var(--orange);
 }
 
+
+
+
+
 .book .row{
   display: flex;
   flex-wrap: wrap;
@@ -310,6 +325,9 @@ header .search-bar-container label:hover{
 .book .row .image img{
   width:100%;
 }
+
+
+
 
 .book .row form{
   flex:1 1 40rem;
@@ -336,6 +354,9 @@ header .search-bar-container label:hover{
   padding:1rem 0;
   color:#666;
 }
+
+
+
 
 .packages .box-container{
   display: flex;
@@ -509,6 +530,9 @@ header .search-bar-container label:hover{
   font-size: 1.7rem;
 }
 
+
+
+
 .contact .row{
   display: flex;
   flex-wrap: wrap;
@@ -523,6 +547,9 @@ header .search-bar-container label:hover{
 .contact .row .image img{
   width:100%;
 }
+
+
+
 
 .contact .row form{
   flex:1 1 50rem;
@@ -552,6 +579,8 @@ header .search-bar-container label:hover{
   resize: none;
   width:100%;
 }
+
+
 
 .brand-container{
   text-align: center;
