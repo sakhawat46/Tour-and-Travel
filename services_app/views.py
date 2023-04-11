@@ -15,13 +15,16 @@ def services(request):
 
 def visa(request):
     form = VisaForm()
+    registered = False
     all_country = Country.objects.all().order_by('-id')
     if request.method == "POST":
         form = VisaForm(data=request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect(reverse('services_app:services'))
-    diction = {'form':form, 'all_country':all_country}
+            registered = True
+            form = VisaForm()
+            # return HttpResponseRedirect(reverse('services_app:services'))
+    diction = {'form':form, 'all_country':all_country, 'registered':registered}
     return render(request,'services_app/visa.html', context = diction)
 
 
@@ -68,10 +71,13 @@ def flight(request):
 
 def passport(request):
     form = PassportForm()
+    registered = False
     if request.method == "POST":
         form = PassportForm(data=request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect(reverse('services_app:passport'))
-    diction = {'form':form}
+            registered = True
+            form = PassportForm()
+            # return HttpResponseRedirect(reverse('services_app:passport'))
+    diction = {'form':form, 'registered': registered}
     return render(request,'services_app/passport.html', context = diction)
