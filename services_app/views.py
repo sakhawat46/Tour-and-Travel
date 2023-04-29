@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect, redirect
 
 from django.urls import reverse, reverse_lazy
 from services_app.forms import VisaForm, PassportForm
-from services_app.models import Country, Flight
+from services_app.models import Country, Flight, Popular_Destination
 
 from django.contrib import messages
 
@@ -17,6 +17,7 @@ def visa(request):
     form = VisaForm()
     registered = False
     all_country = Country.objects.all().order_by('-id')
+    popular_destination = Popular_Destination.objects.all().order_by('-id')
     if request.method == "POST":
         form = VisaForm(data=request.POST)
         if form.is_valid():
@@ -24,9 +25,18 @@ def visa(request):
             registered = True
             form = VisaForm()
             # return HttpResponseRedirect(reverse('services_app:services'))
-    diction = {'form':form, 'all_country':all_country, 'registered':registered}
+    diction = {'form':form, 'all_country':all_country, 'registered':registered, 'popular_destination':popular_destination}
     return render(request,'services_app/visa.html', context = diction)
 
+
+def destination_details(request, slug):
+
+    # access country without loop in template
+    destination = Popular_Destination.objects.get(slug=slug)
+
+    diction = {'destination':destination}
+
+    return render(request, 'services_app/popular_desti_details.html', context = diction)
 
 
 def country_details(request, slug):
@@ -81,3 +91,6 @@ def passport(request):
             # return HttpResponseRedirect(reverse('services_app:passport'))
     diction = {'form':form, 'registered': registered}
     return render(request,'services_app/passport.html', context = diction)
+
+
+

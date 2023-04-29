@@ -54,6 +54,23 @@ class Visa(models.Model):
         return str(self.name)
     
 
+
+class Popular_Destination(models.Model):
+    name = models.CharField(max_length=50)
+    description = RichTextField(blank=True, null=True)
+    feature_image = models.ImageField(upload_to='flag_images')
+    slug = models.SlugField(max_length=255, unique=True)
+
+    class Meta:
+        ordering = ['name',]
+
+    def __str__(self):
+        return str(self.name)
+
+
+
+
+
 class Flight(models.Model):
     flight_type = models.CharField(max_length=250)
     flying_from = models.CharField(max_length=250)
@@ -101,3 +118,7 @@ class Passport(models.Model):
 
     def __str__(self):
         return str(self.full_name)
+    
+
+
+
